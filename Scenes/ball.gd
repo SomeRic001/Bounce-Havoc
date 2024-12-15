@@ -10,4 +10,4 @@ func _process(delta):
 	pass
 
 func is_ball_moving():
-	return get_linear_velocity().length()<2
+	return get_linear_velocity().length()<3
