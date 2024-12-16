@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://7p8fkqy30sld"]
+
+[ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_0hs7d"]
+[ext_resource type="Texture2D" uid="uid://bo6nwypxgrryy" path="res://Assets/volume full.png" id="2_6kard"]
+[ext_resource type="Texture2D" uid="uid://ck8jqnkaggb2w" path="res://Assets/volume 0.png" id="3_1plcm"]
+[ext_resource type="Texture2D" uid="uid://cmhd6xabiiasp" path="res://Assets/Pause.png" id="4_oalu7"]
+[ext_resource type="Texture2D" uid="uid://dpxftv7gvk3vj" path="res://Assets/play.png" id="5_nskd6"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 544.0
+offset_top = -1.0
+offset_right = 653.0
+offset_bottom = 39.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_0hs7d")
+theme_override_font_sizes/font_size = 30
+text = "LEVEL"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 199.0
+offset_bottom = 88.0
+scale = Vector2(0.613157, 0.697241)
+
+[node name="Vol" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("2_6kard")
+texture_pressed = ExtResource("3_1plcm")
+
+[node name="Pause" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("4_oalu7")
+texture_pressed = ExtResource("5_nskd6")

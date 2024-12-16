@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkb86h1q4rde1"]
+[gd_scene load_steps=4 format=3 uid="uid://bkb86h1q4rde1"]
 
 [ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_8ds6f"]
+[ext_resource type="Script" path="res://Scenes/next_level.gd" id="1_iiiaq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlyt1"]
-bg_color = Color(0.481789, 0.48179, 0.481789, 1)
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -18,40 +19,41 @@ shadow_color = Color(0.439049, 0.439049, 0.439049, 0.6)
 shadow_size = 3
 
 [node name="Next Level" type="CanvasLayer"]
+script = ExtResource("1_iiiaq")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 415.0
-offset_top = 221.0
-offset_right = 454.0
-offset_bottom = 255.0
+offset_left = 411.0
+offset_top = 185.0
+offset_right = 450.0
+offset_bottom = 219.0
 scale = Vector2(9.11453, 8.1177)
 theme_override_styles/panel = SubResource("StyleBoxFlat_tlyt1")
 
 [node name="Next" type="Button" parent="."]
-offset_left = 462.0
-offset_top = 301.0
-offset_right = 1082.0
-offset_bottom = 346.0
+offset_left = 458.0
+offset_top = 278.0
+offset_right = 1078.0
+offset_bottom = 323.0
 scale = Vector2(0.435447, 0.857646)
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
-text = "Next level"
+text = "Next Level"
 
 [node name="Re" type="Button" parent="."]
-offset_left = 462.0
-offset_top = 351.0
-offset_right = 1082.0
-offset_bottom = 396.0
+offset_left = 458.0
+offset_top = 328.0
+offset_right = 1078.0
+offset_bottom = 373.0
 scale = Vector2(0.435447, 0.857646)
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
 text = "Retry Level"
 
 [node name="mENU" type="Button" parent="."]
-offset_left = 464.0
-offset_top = 399.0
-offset_right = 1084.0
-offset_bottom = 444.0
+offset_left = 460.0
+offset_top = 376.0
+offset_right = 1080.0
+offset_bottom = 421.0
 scale = Vector2(0.435447, 0.857646)
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
@@ -63,10 +65,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -108.0
-offset_top = -74.0
-offset_right = 512.0
-offset_bottom = -12.0
+offset_left = -116.0
+offset_top = -104.0
+offset_right = 504.0
+offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.641094, 0.826425)
@@ -82,3 +84,6 @@ theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 40
 text = "Level Complete"
 uppercase = true
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Re" to="." method="_on_re_pressed"]
