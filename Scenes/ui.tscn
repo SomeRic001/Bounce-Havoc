@@ -1,20 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://7p8fkqy30sld"]
+[gd_scene load_steps=7 format=3 uid="uid://7p8fkqy30sld"]
 
 [ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_0hs7d"]
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="1_qx2e5"]
 [ext_resource type="Texture2D" uid="uid://bo6nwypxgrryy" path="res://Assets/volume full.png" id="2_6kard"]
 [ext_resource type="Texture2D" uid="uid://ck8jqnkaggb2w" path="res://Assets/volume 0.png" id="3_1plcm"]
 [ext_resource type="Texture2D" uid="uid://cmhd6xabiiasp" path="res://Assets/Pause.png" id="4_oalu7"]
-[ext_resource type="Texture2D" uid="uid://dpxftv7gvk3vj" path="res://Assets/play.png" id="5_nskd6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1fkr"]
+bg_color = Color(0.791999, 0.791999, 0.791999, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.589096, 0.589096, 0.589095, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.439049, 0.439049, 0.439049, 0.6)
+shadow_size = 3
 
 [node name="UI" type="CanvasLayer"]
+script = ExtResource("1_qx2e5")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 544.0
-offset_top = -1.0
-offset_right = 653.0
-offset_bottom = 39.0
+[node name="Lev" type="MarginContainer" parent="."]
+offset_left = 511.0
+offset_top = -5.0
+offset_right = 620.0
+offset_bottom = 35.0
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="Level" type="Label" parent="Lev"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -39,4 +55,63 @@ texture_pressed = ExtResource("3_1plcm")
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("4_oalu7")
-texture_pressed = ExtResource("5_nskd6")
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="PauseMenu"]
+offset_left = 411.0
+offset_top = 185.0
+offset_right = 450.0
+offset_bottom = 219.0
+scale = Vector2(9.11453, 8.1177)
+theme_override_styles/panel = SubResource("StyleBoxFlat_v1fkr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+offset_left = 520.0
+offset_top = 295.0
+offset_right = 655.0
+offset_bottom = 389.0
+
+[node name="Resume" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0hs7d")
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+
+[node name="mENU" type="Button" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_0hs7d")
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PauseMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.9999
+offset_top = -93.0
+offset_right = 548.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.641094, 0.826425)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/MarginContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PauseMenu/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_0hs7d")
+theme_override_font_sizes/font_size = 60
+text = "PAUSED"
+uppercase = true
+
+[connection signal="pressed" from="VBoxContainer/Vol" to="." method="_on_vol_pressed"]
+[connection signal="pressed" from="VBoxContainer/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

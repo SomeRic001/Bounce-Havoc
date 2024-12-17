@@ -15,8 +15,8 @@ func _on_next_pressed():
 	Engine.time_scale=1
 	var curr_scn = get_tree().current_scene.scene_file_path
 	var nxt = curr_scn.to_int() +1
-	var nxt_scn = "res://Scenes//Level" + str(nxt) + ".tscn"
-	print (nxt_scn)
+	var nxt_scn = "res://Scenes//TestMap" + str(nxt) + ".tscn"
+	get_tree().change_scene_to_file(nxt_scn)
 
 
 func _on_re_pressed():

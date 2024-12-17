@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr5jd37n0iayy"]
+[gd_scene load_steps=6 format=3 uid="uid://dr5jd37n0iayy"]
 
 [ext_resource type="Texture2D" uid="uid://becdmrmj1ofxo" path="res://Assets/Ball.png" id="1_1p1u3"]
 [ext_resource type="Script" path="res://Scenes/ball.gd" id="1_dvsiw"]
@@ -8,6 +8,10 @@ bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lykoy"]
 radius = 20.454
+
+[sub_resource type="Curve" id="Curve_jomm6"]
+_data = [Vector2(0.140449, 1), 0.0, 0.0, 0, 0, Vector2(0.488764, 0.505494), 0.0, 0.0, 0, 0, Vector2(0.735955, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.994382, 0.021978), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [node name="Ball" type="RigidBody2D"]
 position = Vector2(189, 324)
@@ -24,3 +28,16 @@ texture = ExtResource("1_1p1u3")
 position = Vector2(2.85714, 1.42857)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_lykoy")
+
+[node name="Explode" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 25.0
+initial_velocity_max = 50.0
+scale_amount_min = 4.0
+scale_amount_max = 14.0
+scale_amount_curve = SubResource("Curve_jomm6")
