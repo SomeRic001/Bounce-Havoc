@@ -11,7 +11,7 @@ func _process(delta):
 	pass
 
 func is_ball_moving():
-	return get_linear_velocity().length()<3
+	return get_linear_velocity().length()<7
 func die():
 	$Explode.emitting = true
 	col_shape.set_deferred("disabled",true)

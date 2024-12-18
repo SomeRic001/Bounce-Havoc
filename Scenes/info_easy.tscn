@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://euntxaktyp4v"]
+
+[ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_e1qi4"]
+[ext_resource type="Script" path="res://Scenes/info_easy.gd" id="1_tn0tr"]
+
+[node name="Info Easy" type="CanvasLayer"]
+script = ExtResource("1_tn0tr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 111.0
+offset_top = 95.0
+offset_right = 464.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e1qi4")
+text = "CLICK AND DRAG TO LAUNCH THE PLAYER"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 870.0
+offset_top = 305.0
+offset_right = 1223.0
+offset_bottom = 328.0
+rotation = -0.00051619
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e1qi4")
+text = "AVOID THE SPIKES!"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(2, -2)
+points = PackedVector2Array(157, 201, 241, 134)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(-2, -2)
+points = PackedVector2Array(157, 201, 192, 202)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(-33, 2)
+points = PackedVector2Array(194, 172, 192, 202)
+default_color = Color(0, 0, 0, 1)
