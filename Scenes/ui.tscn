@@ -58,6 +58,7 @@ texture_normal = ExtResource("4_oalu7")
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 
 [node name="Panel" type="Panel" parent="PauseMenu"]
 offset_left = 411.0
