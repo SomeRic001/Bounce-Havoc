@@ -58,7 +58,7 @@ func impulse_to_ball():
 	var distance = direction.length()
 	if distance >0 and distance<700 :
 		direction = direction.normalized()
-		var impulse_strength = distance *5
+		var impulse_strength = distance *4
 		var impulse = impulse_strength*direction
 		_ball.apply_impulse(impulse)
 

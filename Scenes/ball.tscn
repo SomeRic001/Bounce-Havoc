@@ -7,7 +7,7 @@
 bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lykoy"]
-radius = 20.454
+radius = 20.0
 
 [sub_resource type="Curve" id="Curve_jomm6"]
 _data = [Vector2(0.140449, 1), 0.0, 0.0, 0, 0, Vector2(0.488764, 0.505494), 0.0, 0.0, 0, 0, Vector2(0.735955, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.994382, 0.021978), 0.0, 0.0, 0, 0]
@@ -21,11 +21,12 @@ gravity_scale = 0.5
 script = ExtResource("1_dvsiw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0.357178, -0.357147)
+scale = Vector2(0.507143, 0.507143)
 texture = ExtResource("1_1p1u3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.85714, 1.42857)
+position = Vector2(1.42856, 0)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_lykoy")
 

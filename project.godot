@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_height=640
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/main_scene="res://Scenes/Level1.tscn"
 
