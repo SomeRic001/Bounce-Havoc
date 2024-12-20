@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6ut118vl50a0"]
+[gd_scene load_steps=5 format=3 uid="uid://b6ut118vl50a0"]
 
 [ext_resource type="Script" path="res://Scenes/game_over.gd" id="1_awt1t"]
 [ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_vpq1y"]
+[ext_resource type="Theme" uid="uid://cdjgmrtgv7sk0" path="res://Assets/Buttons.tres" id="3_aftqg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlyt1"]
 bg_color = Color(0.791999, 0.791999, 0.791999, 1)
@@ -65,14 +66,17 @@ theme_override_constants/separation = 30
 
 [node name="Re" type="Button" parent="Buton"]
 layout_mode = 2
+theme = ExtResource("3_aftqg")
 theme_override_fonts/font = ExtResource("1_vpq1y")
 theme_override_font_sizes/font_size = 30
-text = "Retry Level"
+text = "Retry "
 
 [node name="mENU" type="Button" parent="Buton"]
 layout_mode = 2
+theme = ExtResource("3_aftqg")
 theme_override_fonts/font = ExtResource("1_vpq1y")
 theme_override_font_sizes/font_size = 30
 text = "Menu"
 
 [connection signal="pressed" from="Buton/Re" to="." method="_on_re_pressed"]
+[connection signal="pressed" from="Buton/mENU" to="." method="_on_m_enu_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkb86h1q4rde1"]
+[gd_scene load_steps=5 format=3 uid="uid://bkb86h1q4rde1"]
 
 [ext_resource type="FontFile" uid="uid://cljy8u4g2go02" path="res://Assets/good timing bd.otf" id="1_8ds6f"]
 [ext_resource type="Script" path="res://Scenes/next_level.gd" id="1_iiiaq"]
+[ext_resource type="Theme" uid="uid://cdjgmrtgv7sk0" path="res://Assets/Buttons.tres" id="3_tpy8k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlyt1"]
 bg_color = Color(0.791999, 0.791999, 0.791999, 1)
@@ -26,7 +27,7 @@ offset_left = 411.0
 offset_top = 185.0
 offset_right = 450.0
 offset_bottom = 219.0
-scale = Vector2(9.11453, 8.1177)
+scale = Vector2(9.11453, 8.84907)
 theme_override_styles/panel = SubResource("StyleBoxFlat_tlyt1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -36,9 +37,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -131.0
-offset_top = -100.0
+offset_top = -105.0
 offset_right = 489.0
-offset_bottom = -38.0
+offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.641094, 0.826425)
@@ -61,24 +62,29 @@ offset_left = 494.0
 offset_top = 269.0
 offset_right = 681.0
 offset_bottom = 412.0
+theme_override_constants/separation = 30
 
 [node name="Next" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_tpy8k")
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
-text = "Next Level"
+text = "Next "
 
 [node name="Re" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_tpy8k")
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
-text = "Retry Level"
+text = "Retry "
 
 [node name="mENU" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_tpy8k")
 theme_override_fonts/font = ExtResource("1_8ds6f")
 theme_override_font_sizes/font_size = 30
 text = "Menu"
 
 [connection signal="pressed" from="VBoxContainer/Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="VBoxContainer/Re" to="." method="_on_re_pressed"]
+[connection signal="pressed" from="VBoxContainer/mENU" to="." method="_on_m_enu_pressed"]
