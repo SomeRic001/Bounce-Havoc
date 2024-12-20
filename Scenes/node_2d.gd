@@ -15,7 +15,7 @@ func _ready():
 	ui_elements.append($UI/Lev/Level)
 	ui_elements.append($UI/VBoxContainer/Vol)
 	ui_elements.append($UI/VBoxContainer/Pause)
-	$UI.get_node("Lev/Level").text = "Level "+ str(curr_scn.to_int())
+	$UI.get_node("Lev/Level").text = "LEVEL "+ str(curr_scn.to_int())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
