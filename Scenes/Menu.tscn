@@ -9025,7 +9025,7 @@ script = ExtResource("1_mq0fr")
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_c0vmw")
-volume_db = -20.0
+volume_db = -10.0
 
 [node name="TileMap" parent="." instance=ExtResource("6_brhwn")]
 z_index = -1

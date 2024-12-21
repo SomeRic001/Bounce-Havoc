@@ -9034,7 +9034,7 @@ stream = ExtResource("4_n0e5u")
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_teviw")
-volume_db = -20.0
+volume_db = -10.0
 
 [node name="Spikeloss" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_mg0d4")

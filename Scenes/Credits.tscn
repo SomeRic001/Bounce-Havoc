@@ -9044,7 +9044,7 @@ script = ExtResource("1_cw44i")
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_tledx")
-volume_db = -20.0
+volume_db = -10.0
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 339.0
