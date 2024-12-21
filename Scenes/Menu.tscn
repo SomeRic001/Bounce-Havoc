@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bqsfhpahtjf1m"]
+[gd_scene load_steps=21 format=4 uid="uid://bqsfhpahtjf1m"]
 
 [ext_resource type="Script" path="res://Scenes/menu.gd" id="1_mq0fr"]
 [ext_resource type="AudioStream" uid="uid://cux0w6db5tmj1" path="res://Assets/GameMusic.wav" id="2_c0vmw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bthc2fdlbnf1x" path="res://Assets/Fixing.png" id="9_k67ys"]
 [ext_resource type="Theme" uid="uid://c37vtui3we5rf" path="res://Assets/ExitButton.tres" id="10_2jgmr"]
 [ext_resource type="Texture2D" uid="uid://cwrrpmldnumaf" path="res://Assets/diagonals.png" id="10_87p8f"]
+[ext_resource type="Texture2D" uid="uid://becdmrmj1ofxo" path="res://Assets/Ball.png" id="11_lfjhn"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_8p4ks"]
 tile_data = PackedInt32Array(65536, 786436, 59, 131072, 786436, 60, 196608, 786436, 61, 262144, 1966084, 56, 327680, 1966084, 57, 393216, 1966084, 58, 65537, 1245188, 56, 131073, 851972, 60, 196609, 851972, 61, 262145, 1245188, 56, 327681, 2031620, 57, 2, 1966084, 53, 65538, 1245188, 56, 131074, 1245188, 56, 196610, 1245188, 56, 262146, 2097156, 56, 327682, 1966084, 58, 3, 2031620, 53, 65539, 2162692, 53, 131075, 2162692, 54, 196611, 2162692, 55, 262147, 2031620, 57, 4, 2097156, 53, 65540, 2228228, 53, 131076, 2228228, 54, 196612, 2097156, 56, 5, 2162692, 53, 65541, 2293764, 53, 131077, 2162692, 55, 6, 2228228, 53, 65542, 2228228, 54, 7, 2293764, 53)
@@ -9097,6 +9098,11 @@ layout_mode = 2
 theme = ExtResource("10_2jgmr")
 theme_override_font_sizes/font_size = 30
 text = "Exit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(303, 167)
+scale = Vector2(1.6, 1.4)
+texture = ExtResource("11_lfjhn")
 
 [connection signal="pressed" from="Elements/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Elements/HBoxContainer/Options" to="." method="_on_options_pressed"]

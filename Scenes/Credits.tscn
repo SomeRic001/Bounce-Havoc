@@ -9055,20 +9055,20 @@ scale = Vector2(9.01117, 8.78003)
 theme_override_styles/panel = SubResource("StyleBoxFlat_p4fdg")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 450.0
-offset_top = 67.0
-offset_right = 701.0
-offset_bottom = 128.0
+offset_left = 464.0
+offset_top = 66.0
+offset_right = 715.0
+offset_bottom = 127.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_3ycri")
 theme_override_font_sizes/font_size = 40
 text = "CREDITS"
 
 [node name="Back" type="Button" parent="."]
-offset_left = 471.0
-offset_top = 509.0
-offset_right = 657.0
-offset_bottom = 546.0
+offset_left = 472.0
+offset_top = 535.0
+offset_right = 658.0
+offset_bottom = 572.0
 theme = ExtResource("4_2mt5q")
 theme_override_fonts/font = ExtResource("3_3ycri")
 theme_override_font_sizes/font_size = 30
