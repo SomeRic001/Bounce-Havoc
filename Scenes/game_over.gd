@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 func _on_re_pressed():
 	Engine.time_scale=1
