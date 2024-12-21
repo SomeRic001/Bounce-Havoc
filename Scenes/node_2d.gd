@@ -6,6 +6,7 @@ var ui_elements = []
 var color = "Yellow"
 @onready var _ball = $Ball
 @onready var _flag = $Flag/flag
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var curr_scn = get_tree().current_scene.scene_file_path

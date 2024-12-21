@@ -8179,7 +8179,7 @@ sources/3 = SubResource("TileSetAtlasSource_kpbw5")
 sources/4 = SubResource("TileSetAtlasSource_qs75d")
 pattern_0 = SubResource("TileMapPattern_8p4ks")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_853yr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvat5"]
 texture = ExtResource("8_5cws3")
 0:0/0 = 0
 1:0/0 = 0
@@ -9024,7 +9024,7 @@ texture = ExtResource("8_5cws3")
 28:28/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3iaj7"]
-sources/0 = SubResource("TileSetAtlasSource_853yr")
+sources/0 = SubResource("TileSetAtlasSource_hvat5")
 
 [node name="Tut" type="Node2D"]
 script = ExtResource("1_uj0ve")

@@ -123,7 +123,7 @@ theme_override_font_sizes/font_size = 60
 text = "PAUSED"
 uppercase = true
 
-[connection signal="pressed" from="VBoxContainer/Vol" to="." method="_on_vol_pressed"]
+[connection signal="toggled" from="VBoxContainer/Vol" to="." method="_on_vol_toggled"]
 [connection signal="pressed" from="VBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/retry" to="." method="_on_retry_pressed"]
