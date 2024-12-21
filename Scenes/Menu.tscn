@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bqsfhpahtjf1m"]
+[gd_scene load_steps=25 format=4 uid="uid://bqsfhpahtjf1m"]
 
 [ext_resource type="Script" path="res://Scenes/menu.gd" id="1_mq0fr"]
 [ext_resource type="AudioStream" uid="uid://cux0w6db5tmj1" path="res://Assets/GameMusic.wav" id="2_c0vmw"]
@@ -9021,6 +9021,96 @@ texture = ExtResource("8_ka0hr")
 [sub_resource type="TileSet" id="TileSet_3iaj7"]
 sources/0 = SubResource("TileSetAtlasSource_853yr")
 
+[sub_resource type="Animation" id="Animation_c82n0"]
+resource_name = "new_animation"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1ehcv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_t1ywe"]
+resource_name = "Fadein"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.937255)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w86nt"]
+_data = {
+"Fadein": SubResource("Animation_t1ywe"),
+"RESET": SubResource("Animation_1ehcv"),
+"new_animation": SubResource("Animation_c82n0")
+}
+
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_mq0fr")
 
@@ -9103,6 +9193,18 @@ text = "Exit"
 position = Vector2(303, 167)
 scale = Vector2(1.6, 1.4)
 texture = ExtResource("11_lfjhn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w86nt")
+}
+autoplay = "new_animation"
 
 [connection signal="pressed" from="Elements/HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Elements/HBoxContainer/Options" to="." method="_on_options_pressed"]
